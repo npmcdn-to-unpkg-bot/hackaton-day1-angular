@@ -8,11 +8,10 @@ import { CartService } from './cart.service';
   templateUrl: 'templates/cart.html',
 })
 export class Cart implements OnInit {
-	private componentName: 'Cart'
-	private cartService;
+	private componentName: 'Cart';
+	cartContent;
 
 	constructor(private cartService: CartService) {
-		this.cartService = cartService;
 	}
 
 	ngOnInit() {
