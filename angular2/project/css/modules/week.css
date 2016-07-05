@@ -1,0 +1,13 @@
+.week {
+	display: table;
+	width: 100%;
+}
+
+.week > li {
+	display: table-cell;
+}
+
+.week > li > ul > li {
+	display: block;
+}
+
