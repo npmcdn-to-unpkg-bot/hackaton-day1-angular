@@ -1,4 +1,4 @@
-import { LunchItemOrder } from '../../lunchItemOrder';
+import { LunchItemOrder } from './../lunchItemOrder';
 export var LUNCHITEMS: LunchItemOrder[] = [
     {
         lunchItem: {

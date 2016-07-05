@@ -9,18 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var shift_service_1 = require('./shift.service');
 var DummyComponent = (function () {
-    function DummyComponent() {
+    function DummyComponent(shiftService) {
+        this.shiftService = shiftService;
     }
+    DummyComponent.prototype.getShifts = function () {
+        var _this = this;
+        this.shiftService.getShifts().then(function (shifts) { return _this.shifts = shifts; });
+    };
+    DummyComponent.prototype.ngOnInit = function () {
+        this.getShifts();
+    };
     DummyComponent.prototype.addItemToCart = function (itemID) {
-        myCart.addItem(itemID);
+        //myCart.addItem(itemID);
     };
     DummyComponent = __decorate([
         core_1.Component({
             selector: 'time-block',
+            providers: [shift_service_1.ShiftService],
             templateUrl: 'templates/dummy.html',
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [shift_service_1.ShiftService])
     ], DummyComponent);
     return DummyComponent;
 }());

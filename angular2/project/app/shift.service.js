@@ -14,7 +14,7 @@ var ShiftService = (function () {
     function ShiftService() {
     }
     ShiftService.prototype.getShifts = function () {
-        return shifts_1.SHIFTS;
+        return Promise.resolve(shifts_1.SHIFTS);
     };
     ShiftService.prototype.getMenuForShift = function (date, shift) {
     };

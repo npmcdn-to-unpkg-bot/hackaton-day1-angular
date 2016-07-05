@@ -5,10 +5,9 @@ import { SHIFTS } from './mock/shifts';
 
 @Injectable()
 export class ShiftService {
-
-
+    
     getShifts() {
-        return SHIFTS;
+        return Promise.resolve(SHIFTS);
     }
 
     getMenuForShift(date, shift) {
