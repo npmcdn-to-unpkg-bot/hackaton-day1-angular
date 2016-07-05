@@ -9,6 +9,9 @@
 }
 
 .week > li > ul > li {
+	background: #CCC;
 	display: block;
+	margin-bottom: 1em;
+	padding: .5em;
 }
 
