@@ -3,5 +3,5 @@
 	<ul>
 		<li *ngFor="let lunchItemOrder of cartContent">{{ lunchItemOrder.lunchItem.name }} - {{ lunchItemOrder.lunchItem.price | currency:'EUR' }} <button (click)="removeLunchItemFromShift($event, lunchItemOrder)"><span class="glyphicon glyphicon-minus"></span></button></li>
 	</ul>
-	<p><strong>Total:</strong> {{  getCartTotal() | currency:'EUR' }}</p>
+	<p class="total"><strong>Total:</strong> {{  getCartTotal() | currency:'EUR' }}</p>
 </div>

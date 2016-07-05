@@ -7,16 +7,21 @@
 	width: calc(40% - 2em);
 }
 
-
 .cart h4 {
 	border-bottom: 1px solid #CCC;
+	padding-bottom: .5em;
 }
 
 .cart ul {
 	list-style-type: none;
+	margin-bottom: 1em;
 }
 
 .cart li {
 	border-bottom: 1px dotted #CCC;
 	padding: .25em;
+}
+
+.cart li button {
+	float: right;
 }
