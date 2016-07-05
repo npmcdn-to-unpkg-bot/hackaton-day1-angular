@@ -2,8 +2,22 @@
 	border: 5px solid #CCC;
 }
 
-.menu > ul > li {
-	background: #FEFEFE;
+.menu > li {
 	display: table-cell;
 	padding: 1em;
+}
+
+.menu ul {
+	list-style-type: none;
+}
+
+.menu > li > ul > li {
+	background: #FEFEFE;
+	margin-bottom: .5em;
+	padding: .5em;
+}
+
+.menu button {
+	float: right;
+	margin-left: 1em;
 }
