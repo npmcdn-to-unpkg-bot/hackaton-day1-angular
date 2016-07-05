@@ -1,7 +1,7 @@
 <div class="cart">
-	<h4>Cart</h4>
+	<h2>Cart</h2>
 	<ul>
-		<li class="clearfix" *ngFor="let lunchItemOrder of cartContent">{{ lunchItemOrder.lunchItem.name }} - {{ lunchItemOrder.lunchItem.price | currency:'EUR' : '€' }} <button (click)="removeLunchItemFromShift($event, lunchItemOrder)"><span class="glyphicon glyphicon-minus"></span></button></li>
+		<li class="clearfix" *ngFor="let lunchItemOrder of cartContent">{{ lunchItemOrder.lunchItem.name }} - {{ lunchItemOrder.lunchItem.price | currency:'EUR' : '€' : '.2' }} <button (click)="removeLunchItemFromShift($event, lunchItemOrder)"><span class="glyphicon glyphicon-minus"></span></button></li>
 	</ul>
-	<p class="total"><strong>Total:</strong> {{  getCartTotal() | currency:'EUR' : '€' }}</p>
+	<p class="total"><strong>Total:</strong> {{  getCartTotal() | currency:'EUR' : '€' : '.2' }}</p>
 </div>
