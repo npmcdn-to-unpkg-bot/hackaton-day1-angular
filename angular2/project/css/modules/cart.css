@@ -1,5 +1,6 @@
 .cart {
 	background: rgba(255, 255, 255, .8);
+	border-radius: 8px;
 	padding: 1em;
 	position: absolute;
 	right: 1em;
