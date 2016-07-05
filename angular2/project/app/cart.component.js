@@ -8,30 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-// app/weapons.component.ts
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var cart_component_1 = require('../cart.component');
-var HomeComponent = (function () {
-    function HomeComponent() {
-        this.componentName = 'HomeComponent';
-        this.footerHidden = false;
+// import { ShiftService } from './shift.service';
+var Cart = (function () {
+    function Cart() {
     }
-    HomeComponent.prototype.ngOnInit = function () { };
-    HomeComponent.prototype.ngOnDestroy = function () {
-        // prevent memory leak when component destroyed
-        this.subscription.unsubscribe();
+    Cart.prototype.ngOnInit = function () {
     };
-    HomeComponent = __decorate([
+    Cart = __decorate([
         core_1.Component({
-            selector: 'app-home',
+            selector: 'cart',
             providers: [],
-            directives: [router_1.ROUTER_DIRECTIVES, cart_component_1.Cart],
-            templateUrl: 'templates/home.html',
-            styleUrls: []
+            templateUrl: 'templates/cart.html',
         }), 
         __metadata('design:paramtypes', [])
-    ], HomeComponent);
-    return HomeComponent;
+    ], Cart);
+    return Cart;
 }());
-exports.HomeComponent = HomeComponent;
+exports.Cart = Cart;
