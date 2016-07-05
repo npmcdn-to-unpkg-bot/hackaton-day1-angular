@@ -2,7 +2,7 @@
 	<li *ngFor="let shift of shifts">
 		<h3>{{shift.date | date: 'EEEE'}}</h3>
 		<ul>
-			<li><span (click)="getMenuForShift({{shift.date}}, {{shift.shift}})">{{shift.shift}}</span><small>Bestellen {{shift.deadline | date: 'd/M H:mm'}}</small></li>
+			<li><span (click)="getMenuForShift(1)">{{shift.shift}}</span><small>Bestellen {{shift.deadline | date: 'd/M H:mm'}}</small></li>
 		</ul>
 	</li>
 </ul>
