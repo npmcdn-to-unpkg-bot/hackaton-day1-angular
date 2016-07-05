@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { LunchItemOrder } from './lunchItemOrder';
 import { ORDERS } from './mock/cart-content';
 
+import * as _ from 'lodash';
+
 @Injectable()
 export class CartService {
 
@@ -16,7 +18,7 @@ export class CartService {
         this.orders.push(new LunchItemOrder(item, shift));
     }
 
-    removeLunchItemFromShift(item, shift) {
-        this.orders.remove(0);
+    removeLunchItemFromShift(lunchItemOrder) {
+        _.remove(this.orders, lunchItemOrder);
     }
 }

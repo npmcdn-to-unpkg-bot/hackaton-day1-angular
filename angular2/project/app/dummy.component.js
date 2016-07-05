@@ -33,6 +33,7 @@ var DummyComponent = (function () {
     DummyComponent.prototype.removeLunchItemFromShift = function () {
         var item = 0;
         var shift = 1;
+        x;
         this.cartService.removeLunchItemFromShift(item, shift);
     };
     DummyComponent = __decorate([

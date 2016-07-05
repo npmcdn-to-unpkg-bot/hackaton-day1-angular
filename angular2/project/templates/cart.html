@@ -1,6 +1,6 @@
 <div class="cart">
 	<h4>Cart</h4>
 	<ul>
-		<li *ngFor="let lunchItemOrder of cartContent">{{ lunchItemOrder.lunchItem.name }} <button (click)="removeLunchItemFromShift()"><span class="glyphicon glyphicon-minus"></span></button></li>
+		<li *ngFor="let lunchItemOrder of cartContent">{{ lunchItemOrder.lunchItem.name }} <button (click)="removeLunchItemFromShift($event, lunchItemOrder)"><span class="glyphicon glyphicon-minus"></span></button></li>
 	</ul>
 </div>

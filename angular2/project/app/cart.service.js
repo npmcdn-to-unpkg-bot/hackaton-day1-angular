@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var lunchItemOrder_1 = require('./lunchItemOrder');
 var cart_content_1 = require('./mock/cart-content');
+var _ = require('lodash');
 var CartService = (function () {
     function CartService() {
         this.orders = cart_content_1.ORDERS;
@@ -21,8 +22,8 @@ var CartService = (function () {
     CartService.prototype.orderLunchItemForShift = function (item, shift) {
         this.orders.push(new lunchItemOrder_1.LunchItemOrder(item, shift));
     };
-    CartService.prototype.removeLunchItemFromShift = function (item, shift) {
-        this.orders.remove(0);
+    CartService.prototype.removeLunchItemFromShift = function (lunchItemOrder) {
+        _.remove(this.orders, lunchItemOrder);
     };
     CartService = __decorate([
         core_1.Injectable(), 

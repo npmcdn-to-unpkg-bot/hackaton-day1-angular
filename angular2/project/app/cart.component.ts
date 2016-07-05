@@ -17,4 +17,8 @@ export class Cart implements OnInit {
 	ngOnInit() {
 		this.cartContent = this.cartService.getContent();
 	}
+
+	removeLunchItemFromShift (event, lunchItemOrder) {
+		this.cartService.removeLunchItemFromShift(lunchItemOrder);
+	}
 }

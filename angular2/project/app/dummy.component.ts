@@ -38,7 +38,7 @@ export class DummyComponent implements OnInit {
 
   	removeLunchItemFromShift() {
   		var item = 0;
-  		var shift = 1;
+  		var shift = 1;x	
 
   		this.cartService.removeLunchItemFromShift(item, shift);
   	}
