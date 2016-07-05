@@ -1,6 +1,7 @@
 "use strict";
 var LunchItem = (function () {
-    function LunchItem() {
+    function LunchItem(name) {
+        this.name = name;
     }
     return LunchItem;
 }());

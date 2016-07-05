@@ -13,9 +13,10 @@ var cart_service_1 = require('./cart.service');
 var Cart = (function () {
     function Cart(cartService) {
         this.cartService = cartService;
+        this.cartService = cartService;
     }
     Cart.prototype.ngOnInit = function () {
-        this.cartContent = cartService.getContent();
+        this.cartContent = this.cartService.getContent();
     };
     Cart = __decorate([
         core_1.Component({

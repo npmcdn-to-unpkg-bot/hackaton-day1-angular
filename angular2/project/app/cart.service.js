@@ -9,16 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var cart_content_1 = require('./mock/cart-content');
+var lunchItemOrder_1 = require('./lunchItemOrder');
+// import { ORDERS } from './mock/cart-content';
 var CartService = (function () {
     function CartService() {
-        this.order = cart_content_1.ORDERS;
+        this.orders = [];
     }
     CartService.prototype.getContent = function () {
-        return orders;
+        return this.orders;
     };
-    CartService.prototype.addItem = function (item, amount) {
-        orders;
+    CartService.prototype.orderLunchItemForShift = function (item, shift) {
+        this.orders.push(new lunchItemOrder_1.LunchItemOrder(item, shift));
     };
     CartService = __decorate([
         core_1.Injectable(), 
