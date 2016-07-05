@@ -6,13 +6,13 @@ import { ORDERS } from './mock/cart-content';
 @Injectable()
 export class CartService {
 
-    private order = ORDERS;
+    private orders = ORDERS;
 
     getContent() {
-       return orders;
+       return this.orders;
     }
 
     addItem(item, amount) {
-        orders
+        this.orders
     }
 }

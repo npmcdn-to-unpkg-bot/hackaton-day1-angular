@@ -18,6 +18,10 @@ var DummyComponent = (function () {
         var _this = this;
         this.shiftService.getShifts().then(function (shifts) { return _this.shifts = shifts; });
     };
+    DummyComponent.prototype.getMenu = function (e, shift) {
+        var _this = this;
+        this.shiftService.getMenuForShift(shift).then(function (menu) { return _this.menu = menu; });
+    };
     DummyComponent.prototype.ngOnInit = function () {
         this.getShifts();
     };

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 
 import { SHIFTS } from './mock/shifts';
+import { MENU } from './mock/menu';
+import { Shift } from './shift';
 
 
 @Injectable()
@@ -10,8 +12,8 @@ export class ShiftService {
         return Promise.resolve(SHIFTS);
     }
 
-    getMenuForShift(date, shift) {
-
+    getMenuForShift(shift: Shift) {
+        return Promise.resolve(MENU);
     }
 
 }

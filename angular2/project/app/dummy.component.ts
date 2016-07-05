@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Shift } from './shift';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { LunchItemCategory } from './lunchItemCategory';
 import { ShiftService } from './shift.service';
 
 @Component({
@@ -11,6 +11,7 @@ import { ShiftService } from './shift.service';
 })
 export class DummyComponent implements OnInit {
 	shifts: Shift[];
+	menu: LunchItemCategory[];
 
 	constructor(private shiftService: ShiftService) {
 
@@ -19,6 +20,10 @@ export class DummyComponent implements OnInit {
 	getShifts() {
 		this.shiftService.getShifts().then(shifts => this.shifts = shifts);
 
+	}
+
+	getMenu(e, shift) {
+		this.shiftService.getMenuForShift(shift).then(menu => this.menu = menu);
 	}
 
 

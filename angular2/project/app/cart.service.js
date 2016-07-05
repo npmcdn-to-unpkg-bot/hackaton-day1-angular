@@ -12,13 +12,13 @@ var core_1 = require('@angular/core');
 var cart_content_1 = require('./mock/cart-content');
 var CartService = (function () {
     function CartService() {
-        this.order = cart_content_1.ORDERS;
+        this.orders = cart_content_1.ORDERS;
     }
     CartService.prototype.getContent = function () {
-        return orders;
+        return this.orders;
     };
     CartService.prototype.addItem = function (item, amount) {
-        orders;
+        this.orders;
     };
     CartService = __decorate([
         core_1.Injectable(), 

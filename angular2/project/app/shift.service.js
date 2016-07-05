@@ -10,13 +10,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var shifts_1 = require('./mock/shifts');
+var menu_1 = require('./mock/menu');
 var ShiftService = (function () {
     function ShiftService() {
     }
     ShiftService.prototype.getShifts = function () {
         return Promise.resolve(shifts_1.SHIFTS);
     };
-    ShiftService.prototype.getMenuForShift = function (date, shift) {
+    ShiftService.prototype.getMenuForShift = function (shift) {
+        return Promise.resolve(menu_1.MENU);
     };
     ShiftService = __decorate([
         core_1.Injectable(), 

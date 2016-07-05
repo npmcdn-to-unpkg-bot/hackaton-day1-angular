@@ -2,16 +2,20 @@
 	<li *ngFor="let shift of shifts">
 		<h3>{{shift.date | date: 'EEEE'}}</h3>
 		<ul>
-			<li><span (click)="getMenuForShift(1)">{{shift.shift}}</span><small>Bestellen {{shift.deadline | date: 'd/M H:mm'}}</small></li>
+			<li (click) = "getMenu($event, shift)"><span>{{shift.shift}}</span><small>Bestellen {{shift.deadline | date: 'd/M H:mm'}}</small></li>
 		</ul>
 	</li>
 </ul>
 
-<ul class="menu menu-noon">
-	<li>
-		<h3>Soup</h3>
+<ul class="menu">
+	<li *ngFor="let category of menu">
+		<h3>{{category.name}}</h3>
 		<ul>
-			<li>Soup of the day <button (click)="addItemToCart(1)"><span class="gryphicon glyphicon-plus"></span></button></li>
+			<li *ngFor="let category of category.options">
+				<button>
+					<span class="gryphicon glyphicon-plus"></span>
+				</button>
+			</li>
 		</ul>
 	</li>
 	<li>
