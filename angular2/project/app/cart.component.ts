@@ -24,6 +24,6 @@ export class Cart implements OnInit {
 	}
 
 	removeLunchItemFromShift (event, lunchItemOrder) {
-		this.cartService.removeLunchItemFromShift(lunchItemOrder);
+		//this.cartService.removeLunchItemFromShift(lunchItemOrder);
 	}
 }

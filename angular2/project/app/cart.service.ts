@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+import { Shift } from './shift';
 import { LunchItemOrder } from './lunchItemOrder';
 import { ORDERS } from './mock/cart-content';
 
@@ -21,10 +22,24 @@ export class CartService {
     }
 
     orderLunchItemForShift(item, shift) {
+        for(var orderedItem of this.orders) {
+            if (item.id === orderedItem.lunchItem.id && shift.getIdentifier() === orderedItem.shift.getIdentifier()) {
+                orderedItem.amount++;
+                return;
+            }
+        }
         this.orders.push(new LunchItemOrder(item, shift));
     }
 
-    removeLunchItemFromShift(lunchItemOrder) {
-        _.remove(this.orders, lunchItemOrder);
+    removeLunchItemFromShift(item, shift) {
+        for(var orderedItem of this.orders) {
+            if (item.id === orderedItem.lunchItem.id && shift.getIdentifier() === orderedItem.shift.getIdentifier()) {
+                if (orderedItem.amount > 1) {
+                    orderedItem.amount--;
+                    return;
+                }
+                //this.orders.remove
+            }
+        }
     }
 }

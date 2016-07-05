@@ -15,6 +15,7 @@ import { ShiftService } from './shift.service';
 export class DummyComponent implements OnInit {
 	shifts: Shift[];
 	menu: LunchItemCategory[];
+	selectedShift: Shift;
 
 	constructor(private shiftService: ShiftService, private cartService: CartService) {
 
@@ -25,6 +26,7 @@ export class DummyComponent implements OnInit {
 	}
 
 	getMenu(e, shift) {
+		this.selectedShift = shift;
 		this.shiftService.getMenuForShift(shift).then(menu => this.menu = menu);
 	}
 
@@ -38,8 +40,8 @@ export class DummyComponent implements OnInit {
 
   	removeLunchItemFromShift() {
   		var item = 0;
-  		var shift = 1;x	
+  		var shift = 1;
 
-  		this.cartService.removeLunchItemFromShift(item, shift);
+  		//this.cartService.removeLunchItemFromShift(item, shift);
   	}
 }

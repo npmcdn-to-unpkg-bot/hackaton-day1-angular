@@ -13,7 +13,7 @@
 		<ul>
 			<li class="clearfix" *ngFor="let item of category.items">
 				{{item.name}} - {{ item.price | currency: 'EUR' : '€' : '.2' }}
-				<button (click)="orderLunchItemForShift($event, item, shift)">
+				<button (click)="orderLunchItemForShift($event, item, selectedShift)">
 					<span class="gryphicon glyphicon-plus"></span>
 				</button>
 			</li>

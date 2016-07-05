@@ -25,10 +25,25 @@ var CartService = (function () {
         }, 0);
     };
     CartService.prototype.orderLunchItemForShift = function (item, shift) {
+        for (var _i = 0, _a = this.orders; _i < _a.length; _i++) {
+            var orderedItem = _a[_i];
+            if (item.id === orderedItem.lunchItem.id && shift.getIdentifier() === orderedItem.shift.getIdentifier()) {
+                orderedItem.amount++;
+                return;
+            }
+        }
         this.orders.push(new lunchItemOrder_1.LunchItemOrder(item, shift));
     };
-    CartService.prototype.removeLunchItemFromShift = function (lunchItemOrder) {
-        _.remove(this.orders, lunchItemOrder);
+    CartService.prototype.removeLunchItemFromShift = function (item, shift) {
+        for (var _i = 0, _a = this.orders; _i < _a.length; _i++) {
+            var orderedItem = _a[_i];
+            if (item.id === orderedItem.lunchItem.id && shift.getIdentifier() === orderedItem.shift.getIdentifier()) {
+                if (orderedItem.amount > 1) {
+                    orderedItem.amount--;
+                    return;
+                }
+            }
+        }
     };
     CartService = __decorate([
         core_1.Injectable(), 

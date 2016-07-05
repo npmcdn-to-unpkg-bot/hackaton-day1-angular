@@ -1,33 +1,10 @@
 "use strict";
+var shift_1 = require('./../shift');
 exports.SHIFTS = [
-    {
-        date: new Date(2016, 7, 5),
-        shift: 'lunch',
-        deadline: new Date(2016, 7, 5, 10)
-    },
-    {
-        date: new Date(2016, 7, 5),
-        shift: 'diner',
-        deadline: new Date(2016, 7, 4, 14)
-    },
-    {
-        date: new Date(2016, 7, 6),
-        shift: 'lunch',
-        deadline: new Date(2016, 7, 6, 10)
-    },
-    {
-        date: new Date(2016, 7, 6),
-        shift: 'diner',
-        deadline: new Date(2016, 7, 5, 14)
-    },
-    {
-        date: new Date(2016, 7, 7),
-        shift: 'lunch',
-        deadline: new Date(2016, 7, 6, 10)
-    },
-    {
-        date: new Date(2016, 7, 7),
-        shift: 'diner',
-        deadline: new Date(2016, 7, 6, 14),
-    }
+    new shift_1.Shift(new Date(2016, 7, 5), 'lunch', new Date(2016, 7, 5, 10)),
+    new shift_1.Shift(new Date(2016, 7, 5), 'diner', new Date(2016, 7, 4, 14)),
+    new shift_1.Shift(new Date(2016, 7, 6), 'lunch', new Date(2016, 7, 6, 10)),
+    new shift_1.Shift(new Date(2016, 7, 6), 'diner', new Date(2016, 7, 5, 14)),
+    new shift_1.Shift(new Date(2016, 7, 7), 'lunch', new Date(2016, 7, 6, 10)),
+    new shift_1.Shift(new Date(2016, 7, 7), 'diner', new Date(2016, 7, 6, 14))
 ];
