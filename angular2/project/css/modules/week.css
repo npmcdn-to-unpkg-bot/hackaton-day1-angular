@@ -15,6 +15,11 @@
 	padding: .5em;
 }
 
+.week > li > ul > li:hover {
+	background: #B7B7B7;
+	cursor: pointer;
+}
+
 .week li small {
 	display: block;
 }
