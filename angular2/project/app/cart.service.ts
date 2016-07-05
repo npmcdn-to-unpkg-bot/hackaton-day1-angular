@@ -15,4 +15,8 @@ export class CartService {
     orderLunchItemForShift(item, shift) {
         this.orders.push(new LunchItemOrder(item, shift));
     }
+
+    removeLunchItemFromShift(item, shift) {
+        this.orders.remove(0);
+    }
 }

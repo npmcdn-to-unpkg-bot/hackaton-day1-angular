@@ -35,4 +35,11 @@ export class DummyComponent implements OnInit {
   	orderLunchItemForShift(e, item, shift) {
   		this.cartService.orderLunchItemForShift(item, shift);
   	}
+
+  	removeLunchItemFromShift() {
+  		var item = 0;
+  		var shift = 1;
+
+  		this.cartService.removeLunchItemFromShift(item, shift);
+  	}
 }

@@ -11,3 +11,12 @@
 .cart h4 {
 	border-bottom: 1px solid #CCC;
 }
+
+.cart ul {
+	list-style-type: none;
+}
+
+.cart li {
+	border-bottom: 1px dotted #CCC;
+	padding: .25em;
+}

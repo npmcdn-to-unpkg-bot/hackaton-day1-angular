@@ -21,6 +21,9 @@ var CartService = (function () {
     CartService.prototype.orderLunchItemForShift = function (item, shift) {
         this.orders.push(new lunchItemOrder_1.LunchItemOrder(item, shift));
     };
+    CartService.prototype.removeLunchItemFromShift = function (item, shift) {
+        this.orders.remove(0);
+    };
     CartService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
