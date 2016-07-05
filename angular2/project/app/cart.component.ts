@@ -1,22 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-
-// import { Shift } from './shift';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-// import { ShiftService } from './shift.service';
+import { CartService } from './cart.service';
 
 @Component({
   selector: 'cart',
-  providers: [],
+  providers: [CartService],
   templateUrl: 'templates/cart.html',
 })
 export class Cart implements OnInit {
 	private componentName: 'Cart'
 
-	constructor() {
+	constructor(private cartService: CartService) {
 
 	}
 
 	ngOnInit() {
-		
+		this.cartContent = cartService.getContent();
 	}
 }

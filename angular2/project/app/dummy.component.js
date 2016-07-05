@@ -9,10 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var cart_service_1 = require('./cart.service');
 var shift_service_1 = require('./shift.service');
 var DummyComponent = (function () {
-    function DummyComponent(shiftService) {
+    function DummyComponent(shiftService, cartService) {
         this.shiftService = shiftService;
+        this.cartService = cartService;
     }
     DummyComponent.prototype.getShifts = function () {
         var _this = this;
@@ -23,14 +25,15 @@ var DummyComponent = (function () {
     };
     DummyComponent.prototype.addItemToCart = function (itemID) {
         //myCart.addItem(itemID);
+        cartService.addItem("Dummy item");
     };
     DummyComponent = __decorate([
         core_1.Component({
             selector: 'time-block',
-            providers: [shift_service_1.ShiftService],
+            providers: [shift_service_1.ShiftService, cart_service_1.CartService],
             templateUrl: 'templates/dummy.html',
         }), 
-        __metadata('design:paramtypes', [shift_service_1.ShiftService])
+        __metadata('design:paramtypes', [shift_service_1.ShiftService, cart_service_1.CartService])
     ], DummyComponent);
     return DummyComponent;
 }());

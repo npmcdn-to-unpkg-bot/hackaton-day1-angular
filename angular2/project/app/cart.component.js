@@ -9,19 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-// import { ShiftService } from './shift.service';
+var cart_service_1 = require('./cart.service');
 var Cart = (function () {
-    function Cart() {
+    function Cart(cartService) {
+        this.cartService = cartService;
     }
     Cart.prototype.ngOnInit = function () {
+        this.cartContent = cartService.getContent();
     };
     Cart = __decorate([
         core_1.Component({
             selector: 'cart',
-            providers: [],
+            providers: [cart_service_1.CartService],
             templateUrl: 'templates/cart.html',
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [cart_service_1.CartService])
     ], Cart);
     return Cart;
 }());
