@@ -10,10 +10,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var lunchItemOrder_1 = require('./lunchItemOrder');
-// import { ORDERS } from './mock/cart-content';
+var cart_content_1 = require('./mock/cart-content');
 var CartService = (function () {
     function CartService() {
-        this.orders = ORDERS;
+        this.orders = cart_content_1.ORDERS;
     }
     CartService.prototype.getContent = function () {
         return this.orders;
