@@ -1,6 +1,9 @@
 "use strict";
 var LunchItemOrder = (function () {
-    function LunchItemOrder() {
+    function LunchItemOrder(lunchItem, shift) {
+        this.amount = 1;
+        this.lunchItem = lunchItem;
+        this.shift = shift;
     }
     return LunchItemOrder;
 }());

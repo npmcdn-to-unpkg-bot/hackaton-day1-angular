@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { ORDERS } from './mock/cart-content';
-
+import { LunchItemOrder } from './lunchItemOrder';
+// import { ORDERS } from './mock/cart-content';
 
 @Injectable()
 export class CartService {
@@ -11,8 +11,8 @@ export class CartService {
     getContent() {
        return this.orders;
     }
-
-    addItem(item, amount) {
-        this.orders
+    
+    orderLunchItemForShift(item, shift) {
+        this.orders.push(new LunchItemOrder(item, shift));
     }
 }
