@@ -13,7 +13,7 @@
 		<ul>
 			<li *ngFor="let item of category.items">
 				{{item.name}}
-				<button (click)="orderLunchItemForShift(item, shift)">
+				<button (click)="orderLunchItemForShift($event, item, shift)">
 					<span class="gryphicon glyphicon-plus"></span>
 				</button>
 			</li>
