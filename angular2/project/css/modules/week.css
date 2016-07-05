@@ -5,6 +5,7 @@
 
 .week > li {
 	display: table-cell;
+	padding: 1em;
 }
 
 .week > li > ul > li {

@@ -12,6 +12,9 @@ var core_1 = require('@angular/core');
 var DummyComponent = (function () {
     function DummyComponent() {
     }
+    DummyComponent.prototype.addItemToCart = function (itemID) {
+        myCart.addItem(itemID);
+    };
     DummyComponent = __decorate([
         core_1.Component({
             selector: 'time-block',

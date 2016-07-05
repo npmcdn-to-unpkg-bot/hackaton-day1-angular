@@ -1,3 +1,9 @@
 .menu {
 	border: 5px solid #CCC;
 }
+
+.menu > ul > li {
+	background: #FEFEFE;
+	display: table-cell;
+	padding: 1em;
+}

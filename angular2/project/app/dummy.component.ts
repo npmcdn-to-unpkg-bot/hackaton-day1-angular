@@ -10,4 +10,8 @@ export class DummyComponent {
 	constructor() {
 
 	}
+
+  	addItemToCart(itemID) {
+  		myCart.addItem(itemID);
+  	}
 }
