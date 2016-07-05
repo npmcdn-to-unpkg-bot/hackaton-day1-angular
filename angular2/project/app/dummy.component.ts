@@ -32,10 +32,7 @@ export class DummyComponent implements OnInit {
 		this.getShifts();
 	}
 
-  	orderLunchItemForShift() {
-  		var item = new LunchItem("Test lorem");
-  		var shift = 1;
-
+  	orderLunchItemForShift(e, item, shift) {
   		this.cartService.orderLunchItemForShift(item, shift);
   	}
 }
