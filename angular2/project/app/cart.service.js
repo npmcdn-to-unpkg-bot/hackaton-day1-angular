@@ -19,6 +19,11 @@ var CartService = (function () {
     CartService.prototype.getContent = function () {
         return this.orders;
     };
+    CartService.prototype.getTotal = function () {
+        return _.reduce(this.orders, function (sum, order) {
+            return sum + order.lunchItem.price * order.amount;
+        }, 0);
+    };
     CartService.prototype.orderLunchItemForShift = function (item, shift) {
         this.orders.push(new lunchItemOrder_1.LunchItemOrder(item, shift));
     };

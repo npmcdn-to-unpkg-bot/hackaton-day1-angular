@@ -10,12 +10,17 @@ import { CartService } from './cart.service';
 export class Cart implements OnInit {
 	private componentName: 'Cart';
 	cartContent;
+	cartTotal;
 
 	constructor(private cartService: CartService) {
 	}
 
 	ngOnInit() {
 		this.cartContent = this.cartService.getContent();
+	}
+
+	getCartTotal () {
+		return this.cartService.getTotal();
 	}
 
 	removeLunchItemFromShift (event, lunchItemOrder) {

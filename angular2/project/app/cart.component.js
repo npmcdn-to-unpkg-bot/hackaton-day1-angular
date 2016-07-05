@@ -17,6 +17,9 @@ var Cart = (function () {
     Cart.prototype.ngOnInit = function () {
         this.cartContent = this.cartService.getContent();
     };
+    Cart.prototype.getCartTotal = function () {
+        return this.cartService.getTotal();
+    };
     Cart.prototype.removeLunchItemFromShift = function (event, lunchItemOrder) {
         this.cartService.removeLunchItemFromShift(lunchItemOrder);
     };

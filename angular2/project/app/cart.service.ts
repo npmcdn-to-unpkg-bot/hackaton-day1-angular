@@ -14,6 +14,12 @@ export class CartService {
        return this.orders;
     }
 
+    getTotal() {
+    	return _.reduce(this.orders, function(sum, order) {
+    		return sum + order.lunchItem.price * order.amount;
+    	}, 0);
+    }
+
     orderLunchItemForShift(item, shift) {
         this.orders.push(new LunchItemOrder(item, shift));
     }
