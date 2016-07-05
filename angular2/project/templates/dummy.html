@@ -11,8 +11,9 @@
 	<li *ngFor="let category of menu">
 		<h3>{{category.name}}</h3>
 		<ul>
-			<li *ngFor="let category of category.options">
-				<button>
+			<li *ngFor="let item of category.items">
+				{{item.name}}
+				<button (click)="orderLunchItemForShift(item, shift)">
 					<span class="gryphicon glyphicon-plus"></span>
 				</button>
 			</li>

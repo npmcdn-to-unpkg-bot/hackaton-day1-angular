@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var lunchItem_1 = require('./lunchItem');
 var cart_service_1 = require('./cart.service');
 var shift_service_1 = require('./shift.service');
 var DummyComponent = (function () {
@@ -28,9 +27,7 @@ var DummyComponent = (function () {
     DummyComponent.prototype.ngOnInit = function () {
         this.getShifts();
     };
-    DummyComponent.prototype.orderLunchItemForShift = function () {
-        var item = new lunchItem_1.LunchItem("Test lorem");
-        var shift = 1;
+    DummyComponent.prototype.orderLunchItemForShift = function (e, item, shift) {
         this.cartService.orderLunchItemForShift(item, shift);
     };
     DummyComponent.prototype.removeLunchItemFromShift = function () {
