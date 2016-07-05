@@ -27,3 +27,7 @@
 .week li span {
 	font-weight: 700;
 }
+
+.week li.my-class {
+	background: green;
+}
