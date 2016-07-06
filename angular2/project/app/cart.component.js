@@ -21,7 +21,7 @@ var Cart = (function () {
         return this.cartService.getTotal();
     };
     Cart.prototype.removeLunchItemFromShift = function (event, lunchItemOrder) {
-        //this.cartService.removeLunchItemFromShift(lunchItemOrder);
+        this.cartService.removeLunchItemFromShift(lunchItemOrder);
     };
     Cart = __decorate([
         core_1.Component({

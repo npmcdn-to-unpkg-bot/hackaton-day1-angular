@@ -31,10 +31,9 @@ var DummyComponent = (function () {
     DummyComponent.prototype.orderLunchItemForShift = function (e, item, shift) {
         this.cartService.orderLunchItemForShift(item, shift);
     };
-    DummyComponent.prototype.removeLunchItemFromShift = function () {
-        var item = 0;
-        var shift = 1;
-        //this.cartService.removeLunchItemFromShift(item, shift);
+    DummyComponent.prototype.removeLunchItem = function (e, lunchItemOrder) {
+        console.debug(lunchItemOrder);
+        this.cartService.removeLunchItemFromShift(lunchItemOrder);
     };
     DummyComponent = __decorate([
         core_1.Component({

@@ -34,14 +34,14 @@ var CartService = (function () {
         }
         this.orders.push(new lunchItemOrder_1.LunchItemOrder(item, shift));
     };
-    CartService.prototype.removeLunchItemFromShift = function (item, shift) {
-        for (var _i = 0, _a = this.orders; _i < _a.length; _i++) {
-            var orderedItem = _a[_i];
-            if (item.id === orderedItem.lunchItem.id && shift.getIdentifier() === orderedItem.shift.getIdentifier()) {
-                if (orderedItem.amount > 1) {
-                    orderedItem.amount--;
+    CartService.prototype.removeLunchItemFromShift = function (lunchItemOrder) {
+        for (var orderedItem in this.orders) {
+            if (lunchItemOrder.lunchItem.id === this.orders[orderedItem].lunchItem.id && lunchItemOrder.shift.getIdentifier() === this.orders[orderedItem].shift.getIdentifier()) {
+                if (this.orders[orderedItem].amount > 1) {
+                    this.orders[orderedItem].amount--;
                     return;
                 }
+                this.orders.splice(parseInt(orderedItem), 1);
             }
         }
     };

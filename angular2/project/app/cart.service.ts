@@ -31,13 +31,14 @@ export class CartService {
         this.orders.push(new LunchItemOrder(item, shift));
     }
 
-    removeLunchItemFromShift(item, shift) {
-        for(var orderedItem of this.orders) {
-            if (item.id === orderedItem.lunchItem.id && shift.getIdentifier() === orderedItem.shift.getIdentifier()) {
-                if (orderedItem.amount > 1) {
-                    orderedItem.amount--;
+    removeLunchItemFromShift(lunchItemOrder) {
+        for(var orderedItem in this.orders) {
+            if (lunchItemOrder.lunchItem.id === this.orders[orderedItem].lunchItem.id && lunchItemOrder.shift.getIdentifier() === this.orders[orderedItem].shift.getIdentifier()) {
+                if (this.orders[orderedItem].amount > 1) {
+                    this.orders[orderedItem].amount--;
                     return;
                 }
+                this.orders.splice(parseInt(orderedItem), 1);
                 //this.orders.remove
             }
         }
