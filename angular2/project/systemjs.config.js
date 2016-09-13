@@ -12,12 +12,12 @@
   var map = {
     'app':                        'app', // 'dist',
 
-    '@angular':                   'https://npmcdn.com/@angular', // sufficient if we didn't pin the version
-    '@angular/router':            'https://npmcdn.com/@angular/router' + routerVer,
-    '@angular/forms':             'https://npmcdn.com/@angular/forms' + formsVer,
-    'angular2-in-memory-web-api': 'https://npmcdn.com/angular2-in-memory-web-api', // get latest
-    'rxjs':                       'https://npmcdn.com/rxjs@5.0.0-beta.6',
-    'ts':                         'https://npmcdn.com/plugin-typescript@4.0.10/lib/plugin.js',
+    '@angular':                   'https://unpkg.com/@angular', // sufficient if we didn't pin the version
+    '@angular/router':            'https://unpkg.com/@angular/router' + routerVer,
+    '@angular/forms':             'https://unpkg.com/@angular/forms' + formsVer,
+    'angular2-in-memory-web-api': 'https://unpkg.com/angular2-in-memory-web-api', // get latest
+    'rxjs':                       'https://unpkg.com/rxjs@5.0.0-beta.6',
+    'ts':                         'https://unpkg.com/plugin-typescript@4.0.10/lib/plugin.js',
     'lodash':                     'node_modules/lodash',
     'moment':                     'node_modules/moment'
   };
